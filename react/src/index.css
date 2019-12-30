@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.formInput{
+  width: 300px !important;
+}
+.blogImage{
+  margin-top:30px;
+  float: right;
+  margin-right: 2%;
+}
+.loginForm{
+  float: left;
+  margin-top: 50px;
+  margin-left: 5%;
+}
+.dropdown-menu{
+ font-size: 0.9rem !important;
+}
+.nav-link{
+  margin-right: 20px ;
+}
+.addBlog{
+  width: 50%;
+  /* position: absolute; */
+  margin-left: 25%;
+}
+.writeBlog{
+      max-height: "750px",;
+      min-height: "38px";
+      resize: "none";
+      padding: "9px";
+      box-sizing: "border-box";
+      font-size: "15px";
+}
+.settings{
+  margin-left: 40%;
+  margin-top: 5%;
+}

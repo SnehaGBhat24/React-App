@@ -16,7 +16,7 @@ blogSchema = mongoose.Schema({
         required: true,
     },
     blogImage :{
-        type: Buffer,
+        type: String,
     },
     userId:{
         type: mongoose.Schema.Types.ObjectId,

@@ -2,7 +2,7 @@ import request from './baseInstance';
 
 export default {
     async add(params){
-        return await request.post('/addBlog',params);
+        return await request.post('/addBlog', params );
      },
      async getAllBlogs(){
          return await request.get('/getAllBlogs');
@@ -11,7 +11,12 @@ export default {
          return await request.get(`/getBlog/${id}`);
      },
      async blogsForUser(params){
-         console.log('params', params)
         return await request.get('/blogsForUser', {params});
+     },
+     async addReply(params){
+         return await request.post('/addReply', params);
+     },
+     async update(params){
+        return await request.post('/updateReply', params);
      }
 }

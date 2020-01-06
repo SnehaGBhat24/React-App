@@ -4,8 +4,11 @@ import App from './components/App';
 import { Provider } from 'react-redux';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.css';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import store from './store'
+
+toast.configure();
 
 ReactDOM.render(
   <Provider store={store}>

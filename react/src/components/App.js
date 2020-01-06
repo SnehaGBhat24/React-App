@@ -25,25 +25,5 @@ const App = () => {
       </div>
    );
 }
-// class App extends React.Component {
-//    constructor(){
-//       super();
-//    }
-//    render() {
-//       return (
-//          <div id="root">
-//           <Router>
-//              <Header/>
-//              <Switch>
-//               <Route exact path="/" component={ Home }></Route>
-//               <Route exact path="/addBlog" component={ AddBlog }></Route>
-//               <Route exact path='/settings' component={Settings}></Route>
-//               <Route exact path="/user/blogs" component ={UserBlogs}></Route>
-//             </Switch>
-//           </Router>
-//          </div>
-//       );
-//    }
-// }
 
 export default App;

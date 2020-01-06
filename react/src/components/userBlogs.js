@@ -25,16 +25,5 @@ const UserBlogs = () => {
             <Table data={ UserBlogs } columns={ tableColumns }></Table>
         )
 }
-// class UserBlogs extends React.Component{
-//     constructor(){
-//         super();
-//         this.data = [{name:'Sneha'}]
-//         this.columns = [{Header: 'Name', accessor: 'name'}]
-//     }
-//     render(){
-//         return(
-//          <Table data={this.data} columns={this.columns}></Table>
-//     )}
-// }
 
 export default UserBlogs;

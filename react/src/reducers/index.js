@@ -1,5 +1,5 @@
 /* Use combine Reducers when there are more than 2 reducers , 
-so that state value haib=ving reducerName as key can be avoided. */
+so that state value having reducerName as key can be avoided (when there is a single reducer.) */
 
 import { combineReducers } from 'redux';
 import isLoggedReducer from './isLoggedReducer';

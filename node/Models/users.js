@@ -1,4 +1,6 @@
 const mongoose = require('mongoose');
+const blogs = require('../Models/blogs');
+const blogSchema = require('mongoose').model('reply').schema;
 
 userSchema = mongoose.Schema({
     email : {
@@ -10,7 +12,7 @@ userSchema = mongoose.Schema({
        required: true,
     },
     blogsForUser: {
-        type: Array,
+        type: [blogSchema],
     },
 })
 

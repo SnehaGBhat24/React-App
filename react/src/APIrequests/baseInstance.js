@@ -2,6 +2,14 @@ import axios from 'axios';
 
 const baseUrl = '/api';
 
-export default axios.create({
+let baseInstance = axios.create({
     baseURL: baseUrl,
 });
+
+baseInstance.interceptors.response.use((response) => {
+    return response;
+  }, (error) => {
+    return Promise.reject(error.response);
+  });
+
+export default baseInstance;

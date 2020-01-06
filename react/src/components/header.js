@@ -4,12 +4,14 @@ import { Navbar, NavbarBrand, Nav , NavItem ,NavLink, UncontrolledDropdown,
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from "@fortawesome/fontawesome-svg-core";
 import logoutAction from '../actions/logoutAction';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 library.add(faUser);
 
 const Header = () => {
+  const isLogged = useSelector(state => state.isLoggedIn);
+  console.log('isLogged', isLogged)
   const dispatch = useDispatch();
 
   const logout = () =>{
@@ -24,10 +26,10 @@ const Header = () => {
           <NavLink href="/">Home</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/addBlog">Add Your Blog</NavLink>
+          <NavLink disabled={!isLogged} href="/addBlog">Add Your Blog</NavLink>
         </NavItem>
         <NavItem>
-          <NavLink href="/allBlogs">View Blogs</NavLink>
+          <NavLink disabled={!isLogged} href="/allBlogs">View Blogs</NavLink>
         </NavItem>
         <UncontrolledDropdown nav inNavbar>
           <DropdownToggle nav caret>
@@ -35,13 +37,13 @@ const Header = () => {
           </DropdownToggle>
           <DropdownMenu right>
             <DropdownItem>
-            <NavLink href="/settings">Account Settings</NavLink>
+            <NavLink  disabled={!isLogged}  href="/settings">Account Settings</NavLink>
             </DropdownItem>
             <DropdownItem>
-            <NavLink href="/user/blogs">Your Blogs</NavLink>
+            <NavLink  disabled={!isLogged}  href="/user/blogs">Your Blogs</NavLink>
             </DropdownItem>
             <DropdownItem>
-            <NavLink onClick={ logout } href='/'>Logout</NavLink>
+            <NavLink  disabled={!isLogged}  onClick={ logout } href='/'>Logout</NavLink>
             </DropdownItem>
           </DropdownMenu>
         </UncontrolledDropdown>
